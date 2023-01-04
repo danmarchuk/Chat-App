@@ -12,7 +12,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="IfY-gH-ZMP">
             <objects>
-                <viewController id="RL1-ry-Vgg" customClass="WelcomeViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RL1-ry-Vgg" customClass="WelcomeViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZU9-sQ-5Fi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                     <segue destination="oFJ-RI-dZl" kind="show" id="ELc-jw-tlO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-cN-aBp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-cN-aBp" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="52" y="396" width="289" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="X2e-xy-Ynh"/>
@@ -73,7 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FCQ-UX-1CB"/>
                     <connections>
-                        <outlet property="titleLabel" destination="zJ0-cN-aBp" id="cez-p4-bhJ"/>
+                        <outlet property="titleLabel" destination="zJ0-cN-aBp" id="rQS-Te-4Z5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr0-wB-9Ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,7 +83,7 @@
         <!--Login View Controller-->
         <scene sceneID="9ET-dN-tu6">
             <objects>
-                <viewController id="oFJ-RI-dZl" customClass="LoginViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oFJ-RI-dZl" customClass="LoginViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KrF-9H-9uC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
         <!--Register View Controller-->
         <scene sceneID="hnf-Yx-1NP">
             <objects>
-                <viewController id="9fJ-fa-V0C" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9fJ-fa-V0C" customClass="RegisterViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PO8-51-QSU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +273,7 @@
         <!--Chat View Controller-->
         <scene sceneID="Nhq-7a-4zC">
             <objects>
-                <viewController id="Qbc-0c-BCT" customClass="ChatViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qbc-0c-BCT" customClass="ChatViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="81m-3z-oWp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,6 +371,9 @@
             <point key="canvasLocation" x="-86.25954198473282" y="134.50704225352112"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="zJ0-cN-aBp"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="oIk-p1-8FA"/>
     </inferredMetricsTieBreakers>
@@ -378,7 +381,7 @@
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
-            <color red="0.41094738245010376" green="0.59832233190536499" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.41100001335144043" green="0.59799998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
