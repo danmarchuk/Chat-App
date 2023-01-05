@@ -16,6 +16,7 @@
 		936916C8296440F40002D174 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936916BF296440F40002D174 /* WelcomeViewController.swift */; };
 		936916C9296440F40002D174 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936916C0296440F40002D174 /* LoginViewController.swift */; };
 		936916CA296440F40002D174 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936916C1296440F40002D174 /* RegisterViewController.swift */; };
+		93AD140529663A2D00F085C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93AD140429663A2D00F085C7 /* GoogleService-Info.plist */; };
 		9A4678221771E3BB7446DD15 /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F77C8BC4F6C91DA52F25D8C /* Pods_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		936916BF296440F40002D174 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		936916C0296440F40002D174 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		936916C1296440F40002D174 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		93AD140429663A2D00F085C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				23B91F32E3EE4555C0A94247 /* Pods-Chat App.debug.xcconfig */,
 				75233B89066129E2BF3E5D6A /* Pods-Chat App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +88,7 @@
 				936916AD29643F210002D174 /* Assets.xcassets */,
 				936916AF29643F210002D174 /* LaunchScreen.storyboard */,
 				936916B229643F210002D174 /* Info.plist */,
+				93AD140429663A2D00F085C7 /* GoogleService-Info.plist */,
 			);
 			path = "Chat App";
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				936916B129643F210002D174 /* LaunchScreen.storyboard in Resources */,
+				93AD140529663A2D00F085C7 /* GoogleService-Info.plist in Resources */,
 				936916AE29643F210002D174 /* Assets.xcassets in Resources */,
 				936916AC29643F200002D174 /* Main.storyboard in Resources */,
 			);
