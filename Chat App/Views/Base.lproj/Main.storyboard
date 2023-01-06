@@ -282,7 +282,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="655"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="ltX-8L-zRG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="ltX-8L-zRG">
                                         <rect key="frame" x="0.0" y="50" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ltX-8L-zRG" id="CXm-CB-0Vn">
@@ -342,7 +342,13 @@
                             <constraint firstItem="OJ7-RV-paV" firstAttribute="top" secondItem="4Oj-IL-r5N" secondAttribute="bottom" id="xp6-ar-Ukn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZOQ-i1-BFH"/>
+                    <navigationItem key="navigationItem" id="ZOQ-i1-BFH">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="R3P-Kc-NmK">
+                            <connections>
+                                <action selector="logOutPressed:" destination="Qbc-0c-BCT" id="PKR-gP-LIw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextfield" destination="1CM-M4-RxF" id="dl4-hq-New"/>
                         <outlet property="tableView" destination="4Oj-IL-r5N" id="BeD-f4-E6H"/>

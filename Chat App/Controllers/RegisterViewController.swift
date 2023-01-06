@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
                     self.showSimpleAlert(title: "Error", message: errorString)
                 } else {
                     // Navigate the user to the ChatViewController
-                    self.performSegue(withIdentifier: "registerToChat", sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }
         }
