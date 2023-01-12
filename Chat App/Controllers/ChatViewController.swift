@@ -25,6 +25,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        title = K.appName
         
         navigationItem.hidesBackButton = true
         
@@ -58,6 +59,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -75,7 +78,12 @@ class ChatViewController: UIViewController {
                     if let e = error {
                         print("There was an issue saving data to Firestore, \(e)")
                     } else {
-                        self.messageTextfield.text = ""
+                        
+                        print("Succsessfully saved the data")
+                        
+                        DispatchQueue.main.async {
+                            self.messageTextfield.text = ""
+                        }
                     }
                 }
         }
@@ -105,6 +113,8 @@ extension ChatViewController: UITableViewDataSource {
     // this method is going to get called the same amount of times as the messages.count
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let message = messages[indexPath.row]
+        
         // create a cell object for the specified reuse identifier and adds it to the table.
         // indexPath is the current cell that the tableView is requesting data for
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
@@ -113,6 +123,24 @@ extension ChatViewController: UITableViewDataSource {
         // set the text of the cell to the String from object "Message[index of the ]"
         // the textLabel property corresponds to the main label in the cell
         cell.messageCellLabel.text = messages[indexPath.row].body
+        
+        // This is the message from the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.messageCellLabel.textColor = UIColor(named: K.BrandColors.purple)
+        }
+        // this is the message from another sender
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.messageCellLabel.textColor = UIColor(named: K.BrandColors.lightPurple)
+            
+        }
+        
+
         return cell
     }
     
